@@ -47,6 +47,49 @@ header .log-in, header .sign-up {
 
 
 
+/***** hero *****/
+
+.hero .hero-text h1 {
+  line-height: .75;
+  letter-spacing: -0.1rem;
+  white-space: nowrap;
+}
+
+.hero .hero-text .and {
+  color: #4b4b4b;
+  font-size: 2rem;
+}
+
+.hero .hero-text .line-2 {
+  color: #4cc0b0;
+  font-size: 2rem;
+  letter-spacing: -0.075rem;
+}
+
+.hero .hero-text ul {
+  margin: 0 0 0 2.75rem;
+  padding: 1.5rem 0;
+  line-height: 2.25rem;
+  list-style-type: none;
+}
+
+.hero .hero-text li .fa-li {
+  left: 0;
+  color: #726ab1;
+}
+
+.hero .hero-text li:first-child .fa-li {
+  color: #8c84cd;
+}
+
+.hero .hero-text li:last-child .fa-li {
+  color: #585295;
+}
+
+/***** end hero *****/
+
+
+
 /***** footer *****/
 
 footer .contact p, footer .copyright p, footer .sitemap li a {
@@ -178,7 +221,21 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
 }
 
 @media only screen and ( max-width: 767px ) {
+
+  /***** hero *****/
   
+  .hero {
+    background-position: 55% 0;
+  }
+
+  .hero .hero-text h1 {
+    font-size: 48px;
+  }
+
+  /***** end hero *****/
+
+  
+
   /***** footer *****/
 
   footer .sitemap {
@@ -222,43 +279,25 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
 
   /***** end header *****/
 
-}
 
 
+  /***** hero *****/
 
+  .hero {
+    background-size: 430%, 100%;
+    background-position: 60% 0;
+  }
 
+  .hero .hero-text {
+    width: 24rem !important
+  }
 
+  .hero .hero-text .et_pb_fullwidth_header_container {
+    width: 95%;
+  }
 
-
-
-
-/* Large screens (1405px upwards) */
-@media only screen and ( min-width: 1405px ) { 
-
-}
-
-/* Laptops and desktops (1100-1405px) */
-@media only screen and ( min-width: 1100px ) and ( max-width: 1405px) { 
-
-}
-
-/* Tablets in landscape mode (981-1100px) */
-@media only screen and ( min-width: 981px ) and ( max-width: 1100px ) { 
-
-}
-
-/* Tablets in portrait mode (768-980px) */
-@media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
-
-}
-
-/* Smartphones in landscape mode (480-768px) */
-@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
-
-}
-
-/* Smartphones in portrait mode (0-479px) */
-@media only screen and ( max-width: 479px ) {
+  /***** end hero *****/
+  
 
 }
 
