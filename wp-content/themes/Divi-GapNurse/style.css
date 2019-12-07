@@ -49,6 +49,10 @@ header .log-in, header .sign-up {
 
 /***** hero *****/
 
+div.hero {
+  z-index: 1;
+}
+
 .hero .hero-text h1 {
   line-height: .75;
   letter-spacing: -0.1rem;
@@ -67,14 +71,13 @@ header .log-in, header .sign-up {
 }
 
 .hero .hero-text ul {
-  margin: 0 0 0 2.75rem;
+  margin: 0 0 0 2.25rem;
   padding: 1.5rem 0;
   line-height: 2.25rem;
   list-style-type: none;
 }
 
 .hero .hero-text li .fa-li {
-  left: 0;
   color: #726ab1;
 }
 
@@ -87,6 +90,82 @@ header .log-in, header .sign-up {
 }
 
 /***** end hero *****/
+
+
+
+/***** utilities *****/
+
+.flex-column-center {
+  align-items: center;
+}
+
+.et_pb_button_alignment_center {
+  margin: 0 auto;
+}
+
+.light {
+  font-weight: 300;
+  letter-spacing: -0.075em;
+}
+
+.primary-color {
+  color: #585295;
+}
+
+.secondary-color {
+  color: #4cc0b0;
+}
+
+.action-color {
+  color: #6dbe4c;
+}
+
+/***** end utilities *****/
+
+
+
+/***** content *****/
+
+.title {
+  font-size: 3rem;
+  display: inline-block;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.25rem;
+  color: #4cc0b0;
+  font-weight: 700;
+}
+
+.value-props ul {
+  list-style-type: none;
+  margin: 0 0 0 2.25em;
+  padding: 0.5rem 0;
+
+}
+
+.value-props li {
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+}
+
+.value-props li .fa-li {
+  color: #4cc0b0;
+}
+
+.faqs h2 {
+  line-height: 1.15;
+}
+
+.faqs .et_pb_toggle_title:before {
+  font-size: 24px;
+  top: 0.75rem;
+  right: auto;
+  left: -2rem;
+}
+
+/***** end content *****/
 
 
 
@@ -191,6 +270,24 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
 
 @media only screen and ( max-width: 980px ) {
 
+  /***** utilities *****/
+
+ 
+
+  /***** end utilities *****/
+
+
+
+  /***** end content *****/
+
+  .value-props div:first-child  {
+    margin-bottom: -0.5rem;
+  }
+
+  /***** end content *****/
+
+
+
   /***** header *****/
 
   header .logo {
@@ -289,7 +386,7 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
   }
 
   .hero .hero-text {
-    width: 24rem !important
+    width: 100% !important
   }
 
   .hero .hero-text .et_pb_fullwidth_header_container {
