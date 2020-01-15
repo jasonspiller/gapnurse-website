@@ -8,7 +8,9 @@ Template: Divi
 Version: 1.0.0
 */
 
-
+.hs-button {
+  background-color: #000 !important;
+}
 
 /***** header *****/
 
@@ -95,6 +97,11 @@ div.hero {
 
 /***** utilities *****/
 
+.no-space {
+  margin: 0;
+  padding: 0;
+}
+
 .flex-column-center {
   align-items: center;
 }
@@ -105,7 +112,15 @@ div.hero {
 
 .light {
   font-weight: 300;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.05em;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.heading-space {
+  padding-bottom: 1.5rem;
 }
 
 .primary-color {
@@ -120,22 +135,32 @@ div.hero {
   color: #6dbe4c;
 }
 
+.et_pb_scroll_top.et-pb-icon {
+  bottom: 2.5rem;
+  background: rgba(108,189,75,1);
+}
+
 /***** end utilities *****/
 
 
 
 /***** content *****/
 
+.content a:hover {
+  border-bottom: solid 1px #6dbe4c;
+}
+
 .title {
-  font-size: 3rem;
   display: inline-block;
+  font-size: 3rem;
 }
 
 .subtitle {
   display: block;
-  font-size: 1.25rem;
   color: #4cc0b0;
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .value-props ul {
@@ -154,6 +179,43 @@ div.hero {
   color: #4cc0b0;
 }
 
+.nurses .content ul, .facilities .content ul {
+  list-style-type: none;
+}
+
+.nurses .content .fa-li, .facilities .content .fa-li {
+  color: #4cc0b0;
+}
+
+.nurses .content ol, .facilities .content ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding: .5rem 0 .5rem 40px;
+}
+
+.nurses .content ol li, .facilities .content ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+
+.nurses .content ol li::before, .facilities .content ol li::before {
+  content: counter(my-awesome-counter);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 24px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  /* top: 2px; */
+  background:#4cc0b0;
+  border-radius: 50%;
+  text-align: center;
+}
+
 .faqs h2 {
   line-height: 1.15;
 }
@@ -163,6 +225,103 @@ div.hero {
   top: 0.75rem;
   right: auto;
   left: -2rem;
+}
+
+button[type="submit"] {
+  margin: 0;
+}
+
+.signup-copy ol {
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding: .5rem 0 .5rem 40px;
+}
+
+.signup-copy ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+
+.signup-copy ol li::before {
+  content: counter(my-awesome-counter);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 32px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background:#4cc0b0;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.form-audience {
+  display: block;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#signUpNurses ul, #signUpProviders ul {
+  list-style: none;
+  color: #6dbe4c;
+  font-weight: 700;
+  padding: 0;
+}
+
+#signUpNurses select, #signUpProviders select {
+  text-align: center;
+  text-align-last: center;
+}
+
+#signUpNurses .et_pb_contact p .et_contact_error, #signUpProviders .et_pb_contact p .et_contact_error  {
+  border: 3px solid #6dbe4c !important;
+}
+
+.sign-up .et_contact_bottom_container, .contact-form .et_contact_bottom_container {
+  float: none;
+  justify-content: center ;
+}
+
+.contact-us .content .subtitle {
+  margin-bottom: 1rem;
+}
+
+.contact-us .content ul {
+  list-style-type: none;
+  margin-left: 2em;
+  padding-bottom: 0;
+}
+
+.contact-us .content li {
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-us .content li:last-child {
+  margin: 3rem 0 1.5rem 0;
+}
+
+.contact-us .content .fa-li {
+  top: -.25em;
+  left: -3rem;
+  height: 2em;
+  border-radius: 50%;
+  padding-top: .25em;
+  background-color: #4cc0b0;
+  color: #ffffff;
+}
+
+.contact-us .content li a {
+  color: #4b4b4b;
+}
+
+.contact-us .content .contact-form {
+  padding-left: 3rem;
+  margin-top: -0.25rem;
 }
 
 /***** end content *****/
@@ -282,6 +441,20 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
 
   .value-props div:first-child  {
     margin-bottom: -0.5rem;
+  }
+
+  .contact-us > div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contact-us .content {
+    margin-bottom: 2rem !important;
+  }
+
+  .contact-us .map .et_pb_map {
+    height: 20rem;
+    margin-top: 2rem;
   }
 
   /***** end content *****/
