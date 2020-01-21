@@ -431,7 +431,14 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
 
   /***** utilities *****/
 
- 
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reverse > div:last-child  {
+    padding-bottom: 2rem;
+  }
 
   /***** end utilities *****/
 
@@ -466,6 +473,11 @@ footer .sitemap a.sign-up, footer .sitemap a.sign-up:visited, footer .sitemap a.
   header .logo {
     flex: 0 0 100%;
     margin: 0 0 1.25rem 0 !important;
+  }
+
+  header .landing-page .logo {
+    flex: 0 0 100%;
+    margin: 0 0 0 0 !important;
   }
 
   /* header .logo div {
